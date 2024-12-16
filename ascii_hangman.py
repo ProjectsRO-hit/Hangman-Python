@@ -1,67 +1,74 @@
 def hangman_graphic(lives):
     stages = [
+        # Stage 6: Full hangman (game over)
         '''
-           -----
-           |   |
-           O   |
-          /|\\  |
-          / \\  |
-               |
+          -----
+          |   |
+          O   |
+         /|\\  |
+         / \\  |
+              |
         --------
         ''',
+        # Stage 5: Missing one leg
         '''
-           -----
-           |   |
-           O   |
-          /|\\  |
-          /    |
-               |
+          -----
+          |   |
+          O   |
+         /|\\  |
+         /    |
+              |
         --------
         ''',
+        # Stage 4: Missing both legs
         '''
-           -----
-           |   |
-           O   |
-          /|\\  |
-               |
-               |
+          -----
+          |   |
+          O   |
+         /|\\  |
+              |
+              |
         --------
         ''',
+        # Stage 3: Missing one arm
         '''
-           -----
-           |   |
-           O   |
-          /|   |
-               |
-               |
+          -----
+          |   |
+          O   |
+         /|   |
+              |
+              |
         --------
         ''',
+        # Stage 2: Only torso and head
         '''
-           -----
-           |   |
-           O   |
-           |   |
-               |
-               |
+          -----
+          |   |
+          O   |
+          |   |
+              |
+              |
         --------
         ''',
+        # Stage 1: Only head
         '''
-           -----
-           |   |
-           O   |
-               |
-               |
-               |
+          -----
+          |   |
+          O   |
+              |
+              |
+              |
         --------
         ''',
+        # Stage 0: Empty gallows
         '''
-           -----
-           |   |
-               |
-               |
-               |
-               |
+          -----
+          |   |
+              |
+              |
+              |
+              |
         --------
         '''
     ]
-    return stages[6 - lives]
+    return stages[lives]
